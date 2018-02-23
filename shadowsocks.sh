@@ -146,7 +146,6 @@ function download_files(){
     if [ "$OS" == 'CentOS' ]; then
         if ! wget -t3 -T30 http://lamp.teddysun.com/ez_setup.py; then
             echo "Failed to download ez_setup.py!"
-            exit 1
         fi
         # Download shadowsocks chkconfig file
         if ! wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks -O /etc/init.d/shadowsocks; then
